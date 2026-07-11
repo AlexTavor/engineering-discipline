@@ -1,0 +1,9 @@
+{
+  "name": "engineering-discipline",
+  "version": "0.1.0",
+  "description": "Portable, stack-independent software-engineering discipline as triggerable skills: the rules a careful reviewer applies by reflex, made explicit. TEST ADEQUACY (does the test bite): assert-by-shape, boundary-tests, no-op-paths, mutation-grading, properties, keep-properties-honest. CODE STRUCTURE (one thing, once, readable): cohesion-review, decompose-by-attention, early-out-over-nested-if, name-and-bundle. FAILURE & CHANGE SAFETY: silent-failure-census, cover-the-mirror, characterize-before-change, reproducibility-baseline, fix-what-you-find. READING UNFAMILIAR CODE: read-the-system, footgun-register. SPEC & DESIGN HYGIENE: design-completeness, one-meaning-per-term, trace-requirements-to-tests, design-assumptions-register. DELIVERY & DE-RISK: pr-sizing, decision-gate, derisk-gate.",
+  "author": {
+    "name": "Alex Tavor",
+    "email": "alex.tavor@gmail.com"
+  }
+}

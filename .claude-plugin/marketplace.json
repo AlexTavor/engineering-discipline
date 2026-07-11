@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "engineering-discipline",
+  "description": "Portable, stack-independent software-engineering discipline: test adequacy, code structure, failure honesty, reading unfamiliar code, spec hygiene, and delivery de-risk, as triggerable Claude Code skills.",
+  "owner": {
+    "name": "Alex Tavor",
+    "email": "alex.tavor@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "engineering-discipline",
+      "source": ".",
+      "description": "24 discipline skills grouped by theme: test adequacy, code structure, failure & change safety, reading unfamiliar code, spec & design hygiene, delivery & de-risk. Stack-independent; each skill triggers on the moment it applies.",
+      "author": { "name": "Alex Tavor" },
+      "category": "workflow"
+    }
+  ]
+}
