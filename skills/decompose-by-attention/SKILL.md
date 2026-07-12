@@ -1,6 +1,7 @@
 ---
 name: decompose-by-attention
 description: Carve a unit of work into attention-sized pieces — roughly ~1 minute of operator planning plus ~1 minute of completion review. Use when scoping a plan or a change, or recursively when an existing scope feels too big to hold in one pass.
+source: "recovered from git: chdr 8f0a17f, 8500a04"
 ---
 
 # decompose-by-attention

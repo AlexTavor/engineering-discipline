@@ -1,6 +1,7 @@
 ---
 name: keep-properties-honest
 description: A property suite can be all-green and still prove nothing: the tautological property passes because it was written by reading the same code it tests. Guard against it with three checks — source every property from the design or a written constraint (never from the implementation), have a separate pass try to beat the suite with a deliberately wrong implementation, and stop on any counterexample to classify it instead of quietly weakening the property. Use before trusting a green property suite, in property review, or whenever a property passes too easily — mutation grading cannot catch this for you.
+source: "recovered from git: chdr 8bc1230, 3435cc7; PDD d40159e, e10352c, b662455"
 ---
 
 # keep-properties-honest
@@ -45,5 +46,5 @@ A clean way to hold a found bug without auto-fixing it: assert the *correct* beh
 
 ## Related
 
-- [properties](../properties/SKILL.md) — what these guards protect.
-- [mutation-grading](../mutation-grading/SKILL.md) — grades strength; these guard against tautology, its blind spot.
+- [property-based-testing](../property-based-testing/SKILL.md) — what these guards protect.
+- [mutation-testing](../mutation-testing/SKILL.md) — grades strength; these guard against tautology, its blind spot.

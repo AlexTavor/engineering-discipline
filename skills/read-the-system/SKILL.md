@@ -1,6 +1,7 @@
 ---
 name: read-the-system
 description: Before asserting how unfamiliar code behaves at runtime — legacy, inherited, or AI-generated — open and read the actual implementation. A name, type, signature, schema, or grep hit is a lead, not a fact; in this kind of codebase they routinely lie. Use any time you are about to make a load-bearing claim about behavior you did not just write.
+source: "recovered from git: chdr db40616, bbca3f9; cave-public 61e8f29, e4d6c25"
 ---
 
 # read-the-system
