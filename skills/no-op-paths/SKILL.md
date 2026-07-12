@@ -1,6 +1,7 @@
 ---
 name: no-op-paths
 description: For any method that mutates state conditionally (cleanup, eviction, pruning, GC, expiry, retraction, compaction, vacuum), the test suite MUST contain a test where the trigger condition is NOT met and post-state equals pre-state. Use when authoring tests for prune_* / evict_* / expire_* / gc_* / cleanup_* / compact_* / vacuum_* methods.
+source: "recovered from git: chdr 36146b1, 23606ac; PDD 9004289, 43b7a2d, ad56541"
 ---
 
 # no-op-paths

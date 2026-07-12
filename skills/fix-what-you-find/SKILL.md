@@ -1,6 +1,7 @@
 ---
 name: fix-what-you-find
 description: When a refactor, a review, or a test-adequacy pass surfaces a real defect — a bug, a gap, a surviving mutant, a swallowed error — close it, don't preserve-and-note it. Behavior-preservation is the right default for a refactor, but it yields to correctness the moment the behavior you would preserve is a bug; the discipline is to fix it and call out the change where reviewers will see it, not to re-implement the bug behind a TODO. Use when a "pure refactor" turns up a latent defect, when characterization reveals current behavior is wrong, or when you catch yourself commenting a problem instead of fixing it. Not a license to scope-creep.
+source: "recovered from git: chdr bbca3f9, 8bc1230; PDD d49cb6b, ffe7195, 73d821b"
 ---
 
 # fix-what-you-find
@@ -19,7 +20,7 @@ Worked case: refactoring a discount calculator reveals the old code applied the 
 
 - A refactor surfaces a latent bug in the code being moved.
 - [characterize-before-change](../characterize-before-change/SKILL.md) reveals current behavior is wrong.
-- A surviving mutant ([mutation-grading](../mutation-grading/SKILL.md)) exposes logic that is both untested and incorrect.
+- A surviving mutant ([mutation-testing](../mutation-testing/SKILL.md)) exposes logic that is both untested and incorrect.
 - A [silent-failure-census](../silent-failure-census/SKILL.md) finds a swallowed error that actually matters.
 - You are about to write a comment describing a problem instead of fixing the problem.
 
@@ -48,6 +49,6 @@ Not lintable — "is this preserved behavior a bug or a contract?" is judgment. 
 ## Related
 
 - [characterize-before-change](../characterize-before-change/SKILL.md) — pin the bug, add the failing test for the right behavior, then fix; don't bless it.
-- [mutation-grading](../mutation-grading/SKILL.md) — a surviving mutant is often a found defect, not just a missing test.
+- [mutation-testing](../mutation-testing/SKILL.md) — a surviving mutant is often a found defect, not just a missing test.
 - [silent-failure-census](../silent-failure-census/SKILL.md) — swallowed errors you turn up are candidates to close, not just to catalogue.
 - [cohesion-review](../cohesion-review/SKILL.md) — carve the duplication you find rather than noting it; the same close-it-now reflex, pointed at structure.

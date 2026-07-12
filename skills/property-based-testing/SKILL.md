@@ -1,9 +1,10 @@
 ---
-name: properties
+name: property-based-testing
 description: Pin behavior that ranges over structured input — parsers, validators, classifiers, rule engines, compilers, calculators — with a generated property over the input shape, not a handful of examples. Properties come from two sources: the data's schema (well-formed in → well-formed out, nothing dropped, references resolve) and the design (round-trip, conservation, idempotence, monotonicity, clamp, decision-totality). Use whenever you write or review tests for invariant-rich code — the example you didn't think to write is exactly where the bug hides.
+source: "recovered from git: chdr 7f56740; cave-public b6ee6d9; PDD e10352c"
 ---
 
-# properties
+# property-based-testing
 
 ## Statement
 
@@ -42,10 +43,10 @@ One tool runs both.
 
 ## Mechanical enforcement
 
-No clean lint catches "is this a real property, or an example in disguise?" — that's a review judgment. Grade it instead with mutation testing ([mutation-grading](../mutation-grading/SKILL.md)): a property that kills no mutant is either too weak or aimed at dead code.
+No clean lint catches "is this a real property, or an example in disguise?" — that's a review judgment. Grade it instead with mutation testing ([mutation-testing](../mutation-testing/SKILL.md)): a property that kills no mutant is either too weak or aimed at dead code.
 
 ## Related
 
-- [mutation-grading](../mutation-grading/SKILL.md) — grades whether a property actually bites.
+- [mutation-testing](../mutation-testing/SKILL.md) — grades whether a property actually bites.
 - [keep-properties-honest](../keep-properties-honest/SKILL.md) — provenance, refutation, and stopping on counterexamples.
 - [boundary-tests](../boundary-tests/SKILL.md) — the example-level companion for numeric limits.

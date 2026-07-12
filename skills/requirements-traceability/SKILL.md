@@ -1,9 +1,10 @@
 ---
-name: trace-requirements-to-tests
+name: requirements-traceability
 description: Every requirement, rule, or acceptance criterion a spec or design states MUST be traceable to at least one test that would fail if it were violated, through a mechanically checkable link — a shared identifier the test names, not a human's claim of coverage. Use when building from a spec, PRD, design doc, constitution, or numbered requirements; when a requirements artifact and a test suite both exist and you need to find requirements with no test (verification gaps) or tests tied to no requirement (scope drift); before trusting a green suite as evidence the spec is met. Not for exploratory or brownfield work with no stated spec (there the recovered characterization tests are the spec), and not for whether the design is complete enough to trace to in the first place — that is design-completeness; this rule starts once requirements are stated and checks that each carries a test.
+source: "recovered from git: chdr 6f44fed, a668732; PDD 17fb72a, edd9307, 1ab0a1f"
 ---
 
-# trace-requirements-to-tests
+# requirements-traceability
 
 ## Statement
 
@@ -11,7 +12,7 @@ Every requirement a spec states MUST map to at least one test that would fail if
 
 ## Why
 
-A green suite only tells you the tests that exist pass. It is silent about a requirement that has no test at all: the suite is green, the requirement is unmet, and nothing makes the absence visible. It is the green-but-wrong failure the adequacy gates fight, moved up one level — from "this test does not bite" to "this requirement has no test." Line coverage cannot catch it: it counts executed lines, not requirements met, which is the same reason line coverage is a weak quality signal (see [mutation-grading](../mutation-grading/SKILL.md)). The link has to be mechanical because a reviewer reading "yes, that's covered" cannot tell a true claim from a false one — only a resolvable identifier can.
+A green suite only tells you the tests that exist pass. It is silent about a requirement that has no test at all: the suite is green, the requirement is unmet, and nothing makes the absence visible. It is the green-but-wrong failure the adequacy gates fight, moved up one level — from "this test does not bite" to "this requirement has no test." Line coverage cannot catch it: it counts executed lines, not requirements met, which is the same reason line coverage is a weak quality signal (see [mutation-testing](../mutation-testing/SKILL.md)). The link has to be mechanical because a reviewer reading "yes, that's covered" cannot tell a true claim from a false one — only a resolvable identifier can.
 
 This is the design→test direction of provenance. [keep-properties-honest](../keep-properties-honest/SKILL.md) requires every property to cite a design source (test→design); this rule requires every design source to carry a test (design→test). Run both and the design↔test mapping is complete in both directions: nothing in the spec ships untested, and nothing in the suite is sourced from the code it tests.
 
@@ -66,5 +67,5 @@ A CI step parses requirement ids from the spec, searches the test tree for each,
 ## Related
 
 - [keep-properties-honest](../keep-properties-honest/SKILL.md) — the test→design direction (provenance); this is the design→test direction (coverage). The pair makes the design↔test mapping complete both ways.
-- [mutation-grading](../mutation-grading/SKILL.md) — why a coverage number is not evidence the tests bite; this rule measures requirement-coverage, a different and necessary thing.
+- [mutation-testing](../mutation-testing/SKILL.md) — why a coverage number is not evidence the tests bite; this rule measures requirement-coverage, a different and necessary thing.
 - [boundary-tests](../boundary-tests/SKILL.md), [no-op-paths](../no-op-paths/SKILL.md) — sibling adequacy gates for per-method test gaps; this one is spec-level.

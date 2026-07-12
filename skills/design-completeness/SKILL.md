@@ -1,6 +1,7 @@
 ---
 name: design-completeness
-description: Before code is written, a design MUST name three things for every behavior it specifies, the three a complete design of its type always has. Its contract (inputs, outputs, invariants), its failure modes (what can go wrong and what happens then), and its edges (boundary, empty, zero, and maximum cases). A design that states only the happy path is not finished, and a section that is present but empty (TBD, TODO, to be detailed) is a gap wearing the costume of completeness. Use when writing or reviewing a design doc, PRD, RFC, or technical plan before implementation, when a design feels thin but you cannot say why, or before committing a plan, to get its contract, failure modes, and edges concrete enough that requirements can later be traced to tests (this rule produces what trace-requirements-to-tests consumes). Reach for this even when the design looks complete, because the missing failure mode is invisible precisely because no one wrote it down.
+description: Before code is written, a design MUST name three things for every behavior it specifies, the three a complete design of its type always has. Its contract (inputs, outputs, invariants), its failure modes (what can go wrong and what happens then), and its edges (boundary, empty, zero, and maximum cases). A design that states only the happy path is not finished, and a section that is present but empty (TBD, TODO, to be detailed) is a gap wearing the costume of completeness. Use when writing or reviewing a design doc, PRD, RFC, or technical plan before implementation, when a design feels thin but you cannot say why, or before committing a plan, to get its contract, failure modes, and edges concrete enough that requirements can later be traced to tests (this rule produces what requirements-traceability consumes). Reach for this even when the design looks complete, because the missing failure mode is invisible precisely because no one wrote it down.
+source: "recovered from git: chdr ef5a64b, 468f636"
 ---
 
 # design-completeness
@@ -13,7 +14,7 @@ A complete design names, for every behavior it specifies: (1) its **contract** �
 
 Implementation is cheap; the expensive errors come from the design that never said what should happen when the input is empty, the dependency is down, or the limit is hit. Those gaps are invisible in review because absence has no anchor — you cannot see the failure mode that isn't written. This rule makes absence visible by naming what a complete design of its type must contain, so a missing failure-modes section becomes a finding instead of a production surprise.
 
-It is the precondition for the verification rules. [trace-requirements-to-tests](../trace-requirements-to-tests/SKILL.md) can only trace requirements that exist; "cover the negatives and edges the spec names" can only cover failure modes the design named. Design-completeness is what gives those rules something to bite on.
+It is the precondition for the verification rules. [requirements-traceability](../requirements-traceability/SKILL.md) can only trace requirements that exist; "cover the negatives and edges the spec names" can only cover failure modes the design named. Design-completeness is what gives those rules something to bite on.
 
 ## The completeness check
 
@@ -37,6 +38,5 @@ Partly checkable: a design of a known type can carry a required-sections templat
 
 ## Related
 
-- [trace-requirements-to-tests](../trace-requirements-to-tests/SKILL.md) — traces the requirements this rule makes sure exist; design-completeness gives it something to trace.
-- [cover-the-mirror](../cover-the-mirror/SKILL.md) — the symmetry slice of completeness (every operation's inverse); this is the broader contract / failure / edge naming.
+- [requirements-traceability](../requirements-traceability/SKILL.md) — traces the requirements this rule makes sure exist; design-completeness gives it something to trace.
 - [design-assumptions-register](../design-assumptions-register/SKILL.md) — completeness names what the design *says*; the register names what it silently *assumes*.

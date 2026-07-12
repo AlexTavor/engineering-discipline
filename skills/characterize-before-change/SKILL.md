@@ -1,6 +1,7 @@
 ---
 name: characterize-before-change
 description: Before changing code you don't fully trust — legacy, inherited, or AI-generated — pin its current behavior in tests first, so a regression turns them red and the tests become the recovered spec. Hold those characterization tests to the same adequacy bar as any other (boundary, no-op, value-pinning) — an example-shaped characterization locks nothing. Use before any refactor or rewrite of code whose behavior is written down nowhere but the code itself. For proving a change didn't drift over the whole output (replay / golden-master), reach for reproducibility-baseline.
+source: "recovered from git: chdr 7f56740, ef5a64b; PDD 1ab0a1f, 395ba1c, d4ad74e"
 ---
 
 # characterize-before-change
@@ -39,11 +40,11 @@ The classic miss: a team pins a pricing function it doesn't trust with three cha
 
 ## Mechanical enforcement
 
-Partly checkable. Coverage shows what's exercised; mutation grading ([mutation-grading](../mutation-grading/SKILL.md)) shows whether the characterization actually bites — a suite that survives mutants isn't pinning behavior. But "did you pin *before* you changed" is a process discipline — the git history (test commit before change commit) shows it, not a lint.
+Partly checkable. Coverage shows what's exercised; mutation grading ([mutation-testing](../mutation-testing/SKILL.md)) shows whether the characterization actually bites — a suite that survives mutants isn't pinning behavior. But "did you pin *before* you changed" is a process discipline — the git history (test commit before change commit) shows it, not a lint.
 
 ## Related
 
 - [reproducibility-baseline](../reproducibility-baseline/SKILL.md) — the other half of locking behavior: proving a change didn't drift.
 - [boundary-tests](../boundary-tests/SKILL.md), [no-op-paths](../no-op-paths/SKILL.md) — the adequacy bar a characterization test is held to.
 - [read-the-system](../read-the-system/SKILL.md) — source the cases by reading, not assuming.
-- [mutation-grading](../mutation-grading/SKILL.md) — grades whether the characterization suite bites.
+- [mutation-testing](../mutation-testing/SKILL.md) — grades whether the characterization suite bites.

@@ -1,9 +1,10 @@
 ---
-name: mutation-grading
+name: mutation-testing
 description: Grade whether a test suite actually bites by injecting small bugs (mutants) and checking the tests catch them — line coverage can't tell you this. Every surviving mutant is either a weak test (add a property or case) or dead code (delete it), so read each survivor before trusting the count. Use when assessing test adequacy on engines, compilers, or parsers — anywhere coverage must mean the tests would actually fail on a bug — and whenever a mutation run reports survivors.
+source: "recovered from git: chdr b34409a, 6896469; PDD eefc0b1, ae0e9be"
 ---
 
-# mutation-grading
+# mutation-testing
 
 ## Statement
 
@@ -17,7 +18,7 @@ Line coverage tells you a line *ran*, not that a test would *fail* if the line w
 
 This is the step most people skip, and the count lies without it. A survivor is one of two things — read it (see [read-the-system](../read-the-system/SKILL.md)) and classify:
 
-1. **Weak test.** The behavior is real and the suite just doesn't pin it. *Fixable* — add a [property](../properties/SKILL.md) or a case. This is the survivor worth chasing.
+1. **Weak test.** The behavior is real and the suite just doesn't pin it. *Fixable* — add a [property](../property-based-testing/SKILL.md) or a case. This is the survivor worth chasing.
 2. **Dead or inert code.** The mutated code can't change any observable output — it's unreachable, subsumed by an earlier check, or normalizes away. *No test can kill it*, because there's nothing to observe. The fix is to delete the code, not to write a test.
 
 Worked case: a module showed seventeen survivors and looked like the richest target on the scoreboard. Reading them, sixteen were dead code — a predicate subsumed by an earlier check, sentinels that couldn't collide, an unused field. Counts mislead; the triage is the real output.
@@ -42,5 +43,5 @@ Once established, mutation runs as a gate with a break threshold (e.g. 90%). Adv
 
 ## Related
 
-- [properties](../properties/SKILL.md) — the strongest way to kill a weak-test survivor.
+- [property-based-testing](../property-based-testing/SKILL.md) — the strongest way to kill a weak-test survivor.
 - [read-the-system](../read-the-system/SKILL.md) — how to classify a survivor (read it, don't count it).

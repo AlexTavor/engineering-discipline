@@ -1,6 +1,7 @@
 ---
 name: derisk-gate
 description: Before committing a plan, prove the riskiest architectural assumptions with a thin end-to-end walking skeleton, then emit a ranked risk register and a GREEN / RED / OVERRIDE verdict. Use before decomposing work into units — on a new package boundary, an unproven integration, a cross-cutting concern, or a load/latency assumption. Skip explicitly (never silently) for incremental work over a proven architecture.
+source: "recovered from git: chdr 14adee3, 8500a04; PDD 565dc77, 53298e5, d8f6020"
 ---
 
 # derisk-gate

@@ -1,6 +1,7 @@
 ---
 name: assert-by-shape
 description: A test for a function that returns a structured value MUST compare the whole produced value against one expected fixture (input to output) in a single deep-equality assertion, not a column of per-field assertions on the same object. Use when authoring OR reviewing tests for config loaders, parsers, mappers, builders, serializers, classifiers, or any test that pokes at 3+ fields of one returned object. This is about test SHAPE (readable, non-brittle), distinct from adequacy.
+source: "recovered from git: PDD f4170cc, 0413b06"
 ---
 
 # assert-by-shape
@@ -9,7 +10,7 @@ description: A test for a function that returns a structured value MUST compare 
 
 When a function returns a structured value (object, array, record), assert the WHOLE value against one expected fixture in a single deep-equality check. Do NOT assert it field by field. The test should read as `input to exact output`: a spec, not a checklist of pokes.
 
-This is about test SHAPE, not adequacy. boundary-tests, mutation-grading, and keep-properties-honest check whether a test catches a bug. This checks that the test is readable and non-brittle. A field-by-field test can be perfectly adequate (mutation-graded, boundary-covered) and still be the wrong shape.
+This is about test SHAPE, not adequacy. boundary-tests, mutation-testing, and keep-properties-honest check whether a test catches a bug. This checks that the test is readable and non-brittle. A field-by-field test can be perfectly adequate (mutation-graded, boundary-covered) and still be the wrong shape.
 
 ## Why
 
@@ -69,7 +70,7 @@ assert.equal(cfg.flows[0].paths.source, "src");
 // RIGHT: one fixture. The spec, the whole shape, on the page.
 assert.deepEqual(shape(loadConfig(dir)), {
   version: 1,
-  flows: [{ id: "typescript", language: "typescript", paths: { source: "src" }, gates: { "cover-the-mirror": "warn" } /* , ... */ }],
+  flows: [{ id: "typescript", language: "typescript", paths: { source: "src" }, gates: { "boundary-tests": "warn" } /* , ... */ }],
   // legacy mirrors, etc.
 });
 ```
@@ -82,6 +83,6 @@ A test-quality lint can flag a test block with 3+ equality assertions whose left
 
 ## Related
 
-- [properties](../properties/SKILL.md): pin behavior over a generated input space. A property is this rule taken to "all inputs," not one fixture.
+- [property-based-testing](../property-based-testing/SKILL.md): pin behavior over a generated input space. A property is this rule taken to "all inputs," not one fixture.
 - [keep-properties-honest](../keep-properties-honest/SKILL.md): the tautology trap (expected derived from the code under test) that pattern 3 guards against.
-- [boundary-tests](../boundary-tests/SKILL.md), [mutation-grading](../mutation-grading/SKILL.md): adequacy (does the test catch a bug), the axis orthogonal to shape.
+- [boundary-tests](../boundary-tests/SKILL.md), [mutation-testing](../mutation-testing/SKILL.md): adequacy (does the test catch a bug), the axis orthogonal to shape.
