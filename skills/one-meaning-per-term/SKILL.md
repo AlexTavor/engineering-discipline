@@ -1,6 +1,7 @@
 ---
 name: one-meaning-per-term
 description: A load-bearing term in a spec or design MUST carry exactly one meaning. When the same word names two different things (or two words name one thing), readers and parsers silently diverge, and the divergence ships as a bug no reviewer can see because each reader was sure they understood. Use whenever you are writing or reviewing a spec, PRD, design doc, API contract, or requirements list, especially when a heavy-lifting term like user, active, valid, complete, retry, or session carries the meaning. Pin each load-bearing term to one definition; a term that passes the two-meanings test (you can state two different precise meanings for how it is used) is a defect to split or disambiguate. Not for prose polish or generic glossaries, and not for whether the design covers every case (that is design-completeness) — this is about a single word carrying two senses. Reach for this even when the user only says the spec is confusing or that two people read it differently.
+source: "recovered from git: chdr 9179710, 8a8ab60"
 ---
 
 # one-meaning-per-term
@@ -44,5 +45,5 @@ The judgment (which terms are load-bearing, whether two uses differ) is human; t
 ## Related
 
 - [footgun-register](../footgun-register/SKILL.md) — the same lie one layer down: a code name that contradicts its behavior. This is the spec term that carries two behaviors.
-- [trace-requirements-to-tests](../trace-requirements-to-tests/SKILL.md) — a requirement written with an ambiguous term cannot be traced to a test that means the same thing by it.
+- [requirements-traceability](../requirements-traceability/SKILL.md) — a requirement written with an ambiguous term cannot be traced to a test that means the same thing by it.
 - [design-completeness](../design-completeness/SKILL.md) — a complete design stated in ambiguous terms is still unbuildable; these compose.

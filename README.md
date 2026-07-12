@@ -21,25 +21,24 @@ Via marketplace:
 
 Skills load on demand: when your prompt, or the work in progress, matches a skill's trigger, its guidance is pulled into context. Nothing is always-on.
 
-## What's inside — 24 skills
+## What's inside — 23 skills
 
-### Test adequacy — does the test actually bite?
+### Test adequacy — does the test actually catch a bug?
 - **assert-by-shape** — compare the whole returned value to one fixture, not field by field.
 - **boundary-tests** — a case exactly at every limit, not only to either side of it.
 - **no-op-paths** — a test where the trigger condition is not met and nothing changes.
-- **mutation-grading** — inject small bugs; a suite that never reddens is not testing.
-- **properties** — pin invariant-rich code over generated inputs, not a handful of examples.
+- **mutation-testing** — inject small bugs; a suite that never reddens is not testing.
+- **property-based-testing** — pin invariant-rich code over generated inputs, not a handful of examples.
 - **keep-properties-honest** — source each property from the design, not the code it tests.
 
 ### Code structure — one thing, once, readable
 - **cohesion-review** — read the whole grown module for a second responsibility, not just the diff.
 - **decompose-by-attention** — size work to about a minute of planning plus a minute of review.
-- **early-out-over-nested-if** — guard clauses over nested `if`; keep the happy path flat.
+- **guard-clauses** — early exits over nested `if`; keep the happy path flat.
 - **name-and-bundle** — never repeat a literal; name it once, bundle what changes together, derive the rest.
 
 ### Failure & change safety — don't ship a silent break
 - **silent-failure-census** — sweep for errors that vanish without a trace; classify real vs benign.
-- **cover-the-mirror** — every create implies a delete, every open a close, every subscribe an unsubscribe.
 - **characterize-before-change** — pin current behavior in tests before touching code you don't trust.
 - **reproducibility-baseline** — build something a change can be diffed against to prove no drift.
 - **fix-what-you-find** — close a defect you surface; don't preserve-and-note it.
@@ -51,7 +50,7 @@ Skills load on demand: when your prompt, or the work in progress, matches a skil
 ### Spec & design hygiene — before code exists
 - **design-completeness** — every behavior names its contract, its failure modes, and its edges.
 - **one-meaning-per-term** — a key term in a spec carries exactly one meaning.
-- **trace-requirements-to-tests** — every requirement maps to a test that fails if it is violated.
+- **requirements-traceability** — every requirement maps to a test that fails if it is violated.
 - **design-assumptions-register** — surface the beliefs a design rests on; give each a falsifier and a detector.
 
 ### Delivery & de-risk — commit deliberately
@@ -61,7 +60,7 @@ Skills load on demand: when your prompt, or the work in progress, matches a skil
 
 ## How the skills relate
 
-Skills cross-reference one another — a surviving mutant in **mutation-grading** feeds **fix-what-you-find**; **read-the-system** produces the contradictions **footgun-register** records; **cohesion-review** is the code cousin of **one-meaning-per-term**. The links are relative, so they resolve wherever the plugin is installed.
+Skills cross-reference one another — a surviving mutant in **mutation-testing** feeds **fix-what-you-find**; **read-the-system** produces the contradictions **footgun-register** records; **cohesion-review** is the code cousin of **one-meaning-per-term**. The links are relative, so they resolve wherever the plugin is installed.
 
 ## Provenance
 

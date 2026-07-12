@@ -1,6 +1,7 @@
 ---
 name: design-assumptions-register
 description: Before building on a design or plan, surface the load-bearing assumptions it rests on — the beliefs about environment, dependencies, behavior, timing, and scale that were never consciously chosen — and record each in a committed register with a falsifying condition ("breaks if X"), a consequence-anchored fragility, and a detector that watches for the break. Use when committing a design, plan, or architecture; when a spec quietly assumes things about its world; or when a team keeps getting surprised by an assumption that turned out false. The high-fragility entries route to derisk-gate or decision-gate; the rest carry a recorded fallback. Not for choices you are explicitly deciding (decision-gate), proving a single high-fragility assumption end-to-end with a walking skeleton (derisk-gate), or name-vs-behavior lies in existing code (footgun-register). This is the wide inventory that feeds derisk-gate, not the spike itself.
+source: "recovered from git: chdr d88f751, 4c5357e; PDD 8a75b12, 3dbbf74, fb59f9a"
 ---
 
 # design-assumptions-register
