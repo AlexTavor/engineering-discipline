@@ -1,9 +1,10 @@
 ---
-name: early-out-over-nested-if
+name: guard-clauses
 description: Prefer a guard clause that exits on the negative case over wrapping the real work in a positive `if`. When a branch's only job is to skip or reject — `if (!ok) return`, `continue`, `throw` — invert it to an early exit so the happy path stays at the base indentation and every precondition reads as a flat checklist at the top. A non-null assertion standing in for a missing check is a guard in disguise; narrow it, don't silence it. Use when writing or reviewing a function past two levels of nesting, a loop body wrapped in one big `if`, or a chain of force-unwraps covering for absent guards. About control-flow readability, not behavior.
+source: "recovered from git: PDD b2ab939"
 ---
 
-# early-out-over-nested-if
+# guard-clauses
 
 ## Statement
 

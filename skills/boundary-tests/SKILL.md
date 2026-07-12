@@ -1,6 +1,7 @@
 ---
 name: boundary-tests
 description: For any comparison predicate against a limit (less-than, less-or-equal, greater-than, greater-or-equal), the test suite MUST contain a case at the boundary itself — x equal to the limit, not only values to either side. Use when authoring tests for cost ceilings, retry counts, timeouts, age thresholds, or any numeric-boundary comparison.
+source: "recovered from git: chdr 36146b1, 86d34c3; PDD 43b7a2d, 299e638"
 ---
 
 # boundary-tests

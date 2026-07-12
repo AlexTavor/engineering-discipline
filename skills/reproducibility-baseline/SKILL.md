@@ -1,6 +1,7 @@
 ---
 name: reproducibility-baseline
 description: Before changing behavior-critical code, establish a baseline that can prove the change didn't alter behavior — replay-and-diff if the system is deterministic, else golden-master/snapshot or injected seams for the clock, RNG, and I/O. Determinism is the easy case, not an assumption: when a snapshot or replay test flakes, inject the seam that makes it reproducible instead of deleting the test. Use to build the no-drift baseline before you change behavior-critical code; the later preservation check diffs against it, and making the system reproducible is itself a remediation deliverable. For pinning specific behaviors as the recovered spec, see characterize-before-change — this is the baseline they're checked against.
+source: "recovered from git: chdr bb2a818, 194a28a; cave-public ec68c65, ac056f5, 1da1f82"
 ---
 
 # reproducibility-baseline
@@ -45,5 +46,5 @@ Strong, once built: a replay or golden-master diff runs in CI and fails on any d
 ## Related
 
 - [characterize-before-change](../characterize-before-change/SKILL.md) — the other half of locking behavior: pinning specific behaviors in tests.
-- [properties](../properties/SKILL.md) — a determinism property (same input → same output, ids stable) is a reproducibility baseline.
+- [property-based-testing](../property-based-testing/SKILL.md) — a determinism property (same input → same output, ids stable) is a reproducibility baseline.
 - [read-the-system](../read-the-system/SKILL.md) — finding the seams means reading where nondeterminism enters.

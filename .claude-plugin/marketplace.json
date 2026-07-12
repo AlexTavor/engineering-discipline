@@ -10,7 +10,7 @@
     {
       "name": "engineering-discipline",
       "source": ".",
-      "description": "24 discipline skills grouped by theme: test adequacy, code structure, failure & change safety, reading unfamiliar code, spec & design hygiene, delivery & de-risk. Stack-independent; each skill triggers on the moment it applies.",
+      "description": "23 discipline skills grouped by theme: test adequacy, code structure, failure & change safety, reading unfamiliar code, spec & design hygiene, delivery & de-risk. Stack-independent; each skill triggers on the moment it applies.",
       "author": { "name": "Alex Tavor" },
       "category": "workflow"
     }

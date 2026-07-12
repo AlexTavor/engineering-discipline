@@ -1,6 +1,7 @@
 ---
 name: name-and-bundle
 description: Never repeat a literal that carries meaning. The first time a string or number means something, name it; the second time you would type the same literal, reference the name. Bundle constants that must change together into one structure, and derive any dependent value from its source instead of restating it. Use when writing or reviewing code with a magic number or string appearing more than once, parallel literals that must stay in sync (a limit and its message, a key and its default), or a value computed by hand that the code could compute. About one source of truth for every data value — the DRY cousin of cohesion-review.
+source: "recovered from git: chdr 6efc97a, 328e07d; PDD cf96cac, 0413b06"
 ---
 
 # name-and-bundle

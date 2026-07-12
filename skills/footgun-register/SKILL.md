@@ -1,6 +1,7 @@
 ---
 name: footgun-register
 description: When reading reveals that a name, type, or signature contradicts the real runtime behavior, record it as a footgun — the misleading appearance, the verified reality, a file:line anchor, and a last-verified date — in a committed register. Use while mapping legacy or AI-generated code, whenever a symbol turns out not to do what it says.
+source: "recovered from git: chdr 55ff8f5, a26ee16; cave-public 61e8f29, e4d6c25"
 ---
 
 # footgun-register

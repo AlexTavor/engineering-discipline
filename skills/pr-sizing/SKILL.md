@@ -1,6 +1,7 @@
 ---
 name: pr-sizing
 description: Decide whether to bundle multiple changes into one PR or ship them standalone. PR size targets the operator's attention (one milestone per PR), not the agent's construction unit (one logical change per PR). Use when composing PRs for structurally similar work — multiple units, multiple amendments, or many files with the same transformation.
+source: "recovered from git: chdr 8f0a17f, 2c418bd"
 ---
 
 # pr-sizing

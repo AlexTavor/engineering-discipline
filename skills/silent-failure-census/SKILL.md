@@ -1,6 +1,7 @@
 ---
 name: silent-failure-census
 description: Sweep a codebase for places that can fail without a trace — swallowed exceptions, ignored error returns, fire-and-forget tasks, unchecked subprocess exits — and record each with its location and a real-vs-benign classification. Use when assessing inherited or AI-generated code, or whenever you need to know where a system could be broken while still looking healthy.
+source: "recovered from git: chdr 2fa9318, 2c418bd; PDD 06c467f, c3148b5, 909ce9c"
 ---
 
 # silent-failure-census
