@@ -3,8 +3,7 @@
   "name": "engineering-discipline",
   "description": "Portable, stack-independent software-engineering discipline: test adequacy, code structure, failure honesty, reading unfamiliar code, spec hygiene, and delivery de-risk, as triggerable Claude Code skills.",
   "owner": {
-    "name": "Alex Tavor",
-    "email": "alex.tavor@gmail.com"
+    "name": "Alex Tavor"
   },
   "plugins": [
     {
