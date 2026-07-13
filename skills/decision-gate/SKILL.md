@@ -1,7 +1,7 @@
 ---
 name: decision-gate
 description: Gate a load-bearing decision before anything is built on it — require an observable kill-condition that would prove the choice wrong, a detector watching for it, and proof proportionate to blast radius and reversibility, ending in a GREEN / RED / OVERRIDE verdict. Use whenever a choice would be costly or near-impossible to walk back — a technology, datastore, or library commitment; an architecture or boundary decision; a requirement that fixes a solution; a scope cut — or when a team keeps making big calls with no record and regretting them later. Triggers even when the user just says "a decision", "a tradeoff", or "a call we need to make", or wants to document a decision before committing to it. Not for merely recommending which option is best, and not for local, reversible choices with a cheap fallback — skip those explicitly.
-source: "recovered from git: chdr 328e07d, ef5a64b; PDD 9746c82, 915f011, 4aee2fe"
+source: "recovered from git: chdr 328e07d, ef5a64b; PDD 9746c82, 4aee2fe"
 ---
 
 # decision-gate

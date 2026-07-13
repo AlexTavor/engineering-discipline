@@ -4,6 +4,8 @@ Portable, stack-independent software-engineering discipline, packaged as Claude 
 
 These are judgment rules, retrieved by trigger, not a linter. Where a rule is also mechanically checkable, the skill says so and names the lint family that catches it; the skill covers the part a tool cannot see.
 
+Some skills name two roles: the **operator** is the human directing the work, and the **agent** is whoever, an AI or a person, carries it out.
+
 ## Install
 
 Local, for one session or project:
@@ -12,12 +14,14 @@ Local, for one session or project:
 claude --plugin-dir /path/to/engineering-discipline
 ```
 
-Via marketplace:
+Via marketplace, from GitHub:
 
 ```
-/plugin marketplace add /path/to/engineering-discipline
+/plugin marketplace add AlexTavor/engineering-discipline
 /plugin install engineering-discipline
 ```
+
+Or point the marketplace at a local clone instead: `/plugin marketplace add /path/to/engineering-discipline`.
 
 Skills load on demand: when your prompt, or the work in progress, matches a skill's trigger, its guidance is pulled into context. Nothing is always-on.
 
