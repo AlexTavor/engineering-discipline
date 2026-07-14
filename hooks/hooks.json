@@ -1,0 +1,29 @@
+{
+  "description": "engineering-discipline: inject the standing SOP directive at session start, and surface the matching discipline skill the moment you edit a test file, unfamiliar source, or a file that has grown large. Reminders show at most once per session. Silence them with a .no-engineering-sop file in the project root.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/session-directive.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/sop-reminder.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

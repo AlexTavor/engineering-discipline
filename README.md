@@ -25,6 +25,15 @@ Or point the marketplace at a local clone instead: `/plugin marketplace add /pat
 
 Skills load on demand: when your prompt, or the work in progress, matches a skill's trigger, its guidance is pulled into context. Nothing is always-on.
 
+## Standing SOPs (hooks)
+
+These skills are meant to be applied by reflex whenever you work on code, not only when you ask for them. The plugin ships hooks (in `hooks/`) that make that reliable rather than hopeful:
+
+- **SessionStart** injects a short standing directive (`hooks/SOP-DIRECTIVE.md`) mapping each coding moment to the skills that apply, so the discipline is present from the first turn.
+- **PostToolUse** watches `Edit` / `Write` / `MultiEdit` and surfaces the matching skill the moment it applies: editing a test file names the test-adequacy skills, editing unfamiliar source names `read-the-system`, and a code file grown past a line threshold names `cohesion-review`. That threshold is language-aware and set from the environment (a fixed number would misfire across stacks): it defaults to 200 lines, overridable globally with `ENGINEERING_DISCIPLINE_COHESION_MAX_LINES` or per language with `ENGINEERING_DISCIPLINE_COHESION_MAX_LINES_<LANGUAGE>` (for example `..._PYTHON`, `..._GO`). Each reminder shows at most once per session, so it stays quiet.
+
+Hooks load at session start, so restart Claude Code after installing for them to take effect. To turn the per-edit reminders off, create a file named `.no-engineering-sop` in the project root, or delete `hooks/hooks.json`. The directive doubles as a paste-in block for a project `CLAUDE.md` if you prefer a static copy.
+
 ## What's inside — 23 skills
 
 ### Test adequacy — does the test actually catch a bug?
