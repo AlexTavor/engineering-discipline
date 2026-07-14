@@ -1,6 +1,6 @@
 ---
 name: reproducibility-baseline
-description: Before changing behavior-critical code, establish a baseline that can prove the change didn't alter behavior — replay-and-diff if the system is deterministic, else golden-master/snapshot or injected seams for the clock, RNG, and I/O. Determinism is the easy case, not an assumption: when a snapshot or replay test flakes, inject the seam that makes it reproducible instead of deleting the test. Use to build the no-drift baseline before you change behavior-critical code; the later preservation check diffs against it, and making the system reproducible is itself a remediation deliverable. For pinning specific behaviors as the recovered spec, see characterize-before-change — this is the baseline they're checked against.
+description: About to refactor or rewrite behavior-critical code and needing to prove the entire output didn't change ("make sure this didn't alter anything"): capture a no-drift baseline over the whole output before you edit, by replay-and-diff if the system is deterministic, else golden-master/snapshot plus injected seams (swap-in test doubles) for the clock, RNG, and I/O. When a snapshot flakes, inject the seam instead of deleting the test. This proves no drift across the entire output; to pin specific named behaviors as the recovered spec, see characterize-before-change. Making it reproducible is itself a remediation deliverable.
 source: "recovered from git: chdr bb2a818, 194a28a; cave-public ec68c65, ac056f5, 1da1f82"
 ---
 

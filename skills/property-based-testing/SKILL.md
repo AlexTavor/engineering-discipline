@@ -1,6 +1,6 @@
 ---
 name: property-based-testing
-description: Pin behavior that ranges over structured input — parsers, validators, classifiers, rule engines, compilers, calculators — with a generated property over the input shape, not a handful of examples. Properties come from two sources: the data's schema (well-formed in → well-formed out, nothing dropped, references resolve) and the design (round-trip, conservation, idempotence, monotonicity, clamp, decision-totality). Use whenever you write or review tests for invariant-rich code — the example you didn't think to write is exactly where the bug hides.
+description: Writing or reviewing tests for code that ranges over structured input: parsers, validators, classifiers, rule engines, compilers, calculators. Pin its behavior with a generated property over the input shape, meaning test over generated inputs instead of a handful of hand-picked examples. Properties come from two sources: the data's schema (well-formed in gives well-formed out, nothing dropped, references resolve) and the design (round-trip, conservation, idempotence, monotonicity, clamp, decision-totality). Skip glue and CRUD where no invariant exists; the example you didn't think to write is exactly where the bug hides.
 source: "recovered from git: chdr 7f56740; cave-public b6ee6d9; PDD e10352c"
 ---
 

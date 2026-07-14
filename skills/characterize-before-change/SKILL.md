@@ -1,6 +1,6 @@
 ---
 name: characterize-before-change
-description: Before changing code you don't fully trust — legacy, inherited, or AI-generated — pin its current behavior in tests first, so a regression turns them red and the tests become the recovered spec. Hold those characterization tests to the same adequacy bar as any other (boundary, no-op, value-pinning) — an example-shaped characterization locks nothing. Use before any refactor or rewrite of code whose behavior is written down nowhere but the code itself. For proving a change didn't drift over the whole output (replay / golden-master), reach for reproducibility-baseline.
+description: Before refactoring or rewriting code you did not write and do not fully trust (legacy, inherited, or AI-generated), pin its current behavior in tests first, so a regression turns them red and the tests become the recovered spec, the written record of its behavior. A developer might say 'refactor this safely.' Hold these characterization tests to the same adequacy bar as any other (boundary, no-op, value-pinning): an example-shaped one, just a few typical inputs, locks nothing. For proving a change didn't drift over the whole output (replay / golden-master), see reproducibility-baseline.
 source: "recovered from git: chdr 7f56740, ef5a64b; PDD 1ab0a1f, 395ba1c, d4ad74e"
 ---
 

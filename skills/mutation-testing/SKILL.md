@@ -1,6 +1,6 @@
 ---
 name: mutation-testing
-description: Grade whether a test suite actually bites by injecting small bugs (mutants) and checking the tests catch them — line coverage can't tell you this. Every surviving mutant is either a weak test (add a property or case) or dead code (delete it), so read each survivor before trusting the count. Use when assessing test adequacy on engines, compilers, or parsers — anywhere coverage must mean the tests would actually fail on a bug — and whenever a mutation run reports survivors.
+description: Assessing whether a test suite catches bugs when line coverage is high but you do not trust it: grade the suite by injecting small bugs (mutants) and checking the tests fail on them, which coverage alone cannot. "Are my tests any good, do they catch bugs?" Every surviving mutant (an injected bug no test caught) is either a weak test (add a property or case) or dead code (delete it), so read each survivor before trusting the count. Use on engines, compilers, or parsers, and whenever a mutation run reports survivors.
 source: "recovered from git: chdr b34409a, 6896469; PDD eefc0b1, ae0e9be"
 ---
 

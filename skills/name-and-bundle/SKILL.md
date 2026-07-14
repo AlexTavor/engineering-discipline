@@ -1,6 +1,6 @@
 ---
 name: name-and-bundle
-description: Never repeat a literal that carries meaning. The first time a string or number means something, name it; the second time you would type the same literal, reference the name. Bundle constants that must change together into one structure, and derive any dependent value from its source instead of restating it. Use when writing or reviewing code with a magic number or string appearing more than once, parallel literals that must stay in sync (a limit and its message, a key and its default), or a value computed by hand that the code could compute. About one source of truth for every data value — the DRY cousin of cohesion-review.
+description: Writing or reviewing code and the same meaningful number or string appears more than once: a retry limit like 3, a role like 'admin', or a value the code could compute instead. This owns duplicated literal values, one source of truth for data; cohesion-review owns duplicated logic. Name a literal on first meaning and reference it after; bundle constants that must change together (a limit and its message, a key and its default) into one structure; derive dependent values from their source. 'Why is this magic number in two places?' Skip a lone literal whose meaning is obvious.
 source: "recovered from git: chdr 6efc97a, 328e07d; PDD cf96cac, 0413b06"
 ---
 

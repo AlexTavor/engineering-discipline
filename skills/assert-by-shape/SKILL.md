@@ -1,6 +1,6 @@
 ---
 name: assert-by-shape
-description: A test for a function that returns a structured value MUST compare the whole produced value against one expected fixture (input to output) in a single deep-equality assertion, not a column of per-field assertions on the same object. Use when authoring OR reviewing tests for config loaders, parsers, mappers, builders, serializers, classifiers, or any test that pokes at 3+ fields of one returned object. This is about test SHAPE (readable, non-brittle), distinct from adequacy.
+description: You are writing or reviewing a test that pokes at 3+ fields of one returned object, checking each field one by one ("the test checks many fields separately"). For a function that returns a structured value, a config loader, parser, mapper, builder, serializer, or classifier, the test MUST compare the whole produced value against one expected fixture (input to output) in a single deep-equality assertion, not a column of per-field assertions on the same object. This is about test SHAPE (readable, non-brittle), distinct from adequacy.
 source: "recovered from git: PDD f4170cc, 0413b06"
 ---
 
