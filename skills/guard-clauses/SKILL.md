@@ -1,6 +1,6 @@
 ---
 name: guard-clauses
-description: Prefer a guard clause that exits on the negative case over wrapping the real work in a positive `if`. When a branch's only job is to skip or reject — `if (!ok) return`, `continue`, `throw` — invert it to an early exit so the happy path stays at the base indentation and every precondition reads as a flat checklist at the top. A non-null assertion standing in for a missing check is a guard in disguise; narrow it, don't silence it. Use when writing or reviewing a function past two levels of nesting, a loop body wrapped in one big `if`, or a chain of force-unwraps covering for absent guards. About control-flow readability, not behavior.
+description: Writing or reviewing a function nested past two levels, a loop body wrapped in one big `if`, or a chain of force-unwraps standing in for missing checks; you think "flatten this nesting." Prefer a guard clause: an early exit on the negative case (`if (!ok) return`, `continue`, `throw`), so the happy path stays at base indentation and each precondition reads as a flat checklist at the top. A non-null assertion or force-unwrap (`x!`, `x!!`) covering for an absent check is a guard in disguise: narrow it, do not silence it. About one function's control-flow shape, not module cohesion (cohesion-review) and not behavior.
 source: "recovered from git: PDD b2ab939"
 ---
 

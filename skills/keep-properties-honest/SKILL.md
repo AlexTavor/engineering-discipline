@@ -1,6 +1,6 @@
 ---
 name: keep-properties-honest
-description: A property suite can be all-green and still prove nothing: the tautological property passes because it was written by reading the same code it tests. Guard against it with three checks — source every property from the design or a written constraint (never from the implementation), have a separate pass try to beat the suite with a deliberately wrong implementation, and stop on any counterexample to classify it instead of quietly weakening the property. Use before trusting a green property suite, in property review, or whenever a property passes too easily — mutation grading cannot catch this for you.
+description: A property-based test suite can be all-green and still prove nothing when a property was written by reading the same code it checks: it just restates the implementation, so the code always satisfies it, bugs and all. Guard against this self-fulfilling property with three checks: source every property from the design or a written constraint and never from the implementation, have a separate pass try to beat the suite with a deliberately wrong implementation, and stop on any counterexample to classify it instead of quietly weakening the property. Run before trusting a green property suite, during property review, or whenever a property has passed since the day it was written and seems unable to fail. Mutation grading cannot catch this for you.
 source: "recovered from git: chdr 8bc1230, 3435cc7; PDD d40159e, e10352c, b662455"
 ---
 

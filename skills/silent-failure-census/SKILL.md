@@ -1,6 +1,6 @@
 ---
 name: silent-failure-census
-description: Sweep a codebase for places that can fail without a trace — swallowed exceptions, ignored error returns, fire-and-forget tasks, unchecked subprocess exits — and record each with its location and a real-vs-benign classification. Use when assessing inherited or AI-generated code, or whenever you need to know where a system could be broken while still looking healthy.
+description: Sweep code for places that can fail without leaving a trace, swallowed exceptions and empty catch blocks, ignored error returns, fire-and-forget async tasks, unchecked subprocess exits, recording each with its file:line and a real-risk-versus-benign classification. Run it whenever you assess inherited, legacy, or AI-generated code, when you review error handling, or before trusting a green test suite, because a system can be broken while every check still looks healthy. Also when a user says 'find where errors get swallowed', 'audit the error handling', or 'why did this fail silently'.
 source: "recovered from git: chdr 2fa9318, 2c418bd; PDD 06c467f, c3148b5, 909ce9c"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: footgun-register
-description: When reading reveals that a name, type, or signature contradicts the real runtime behavior, record it as a footgun — the misleading appearance, the verified reality, a file:line anchor, and a last-verified date — in a committed register. Use while mapping legacy or AI-generated code, whenever a symbol turns out not to do what it says.
+description: When reading reveals that a name, type, or signature lies about what the code actually does at runtime, record the trap in a committed register: the misleading appearance, the verified reality, a file:line anchor, and a last-verified date. An unrecorded name-lie gets re-discovered by the next reader or silently re-broken by the next change, so capture it once as a standing guardrail. Fires while mapping legacy or AI-generated code whenever a symbol turns out not to do what its name says, and when a user notes a function name is misleading or 'it doesn't do what it says'.
 source: "recovered from git: chdr 55ff8f5, a26ee16; cave-public 61e8f29, e4d6c25"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: fix-what-you-find
-description: When a refactor, a review, or a test-adequacy pass surfaces a real defect — a bug, a gap, a surviving mutant, a swallowed error — close it, don't preserve-and-note it. Behavior-preservation is the right default for a refactor, but it yields to correctness the moment the behavior you would preserve is a bug; the discipline is to fix it and call out the change where reviewers will see it, not to re-implement the bug behind a TODO. Use when a "pure refactor" turns up a latent defect, when characterization reveals current behavior is wrong, or when you catch yourself commenting a problem instead of fixing it. Not a license to scope-creep.
+description: When a refactor, review, or test-adequacy pass turns up a genuine defect (a bug, a gap, a surviving mutant, a swallowed error), close it and call out the change where reviewers will see it, instead of faithfully re-implementing the bug behind a TODO. Behavior-preservation is the right default for a refactor, but it yields to correctness the moment the behavior you would preserve is itself a bug. Fires when a 'pure refactor' surfaces a latent bug, when characterization shows current behavior is wrong, when you catch yourself writing a comment that describes a problem instead of fixing it, and when a user asks whether to fix a bug just found or only note it. Not a license to scope-creep or rewrite what you touch.
 source: "recovered from git: chdr bbca3f9, 8bc1230; PDD d49cb6b, ffe7195, 73d821b"
 ---
 

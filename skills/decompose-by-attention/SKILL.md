@@ -1,6 +1,6 @@
 ---
 name: decompose-by-attention
-description: Carve a unit of work into attention-sized pieces — roughly ~1 minute of operator planning plus ~1 minute of completion review. Use when scoping a plan or a change, or recursively when an existing scope feels too big to hold in one pass.
+description: Break a unit of work into pieces small enough to plan in about a minute and review in about a minute, so each piece fits a single pass of attention. Fires whenever you scope a task, turn a goal into a plan, or turn a plan into changes, and recursively whenever a scope feels too big to hold in one pass, spans more than about three distinct concerns, or mixes high-level design with low-level detail. Also when a user says 'break this down', 'this ticket is too big', 'split this work', or 'chunk the plan'. This sizes the work itself, not bundling finished changes into PRs (pr-sizing) or reviewing a grown module (cohesion-review).
 source: "recovered from git: chdr 8f0a17f, 8500a04"
 ---
 

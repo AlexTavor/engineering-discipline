@@ -1,6 +1,6 @@
 ---
 name: read-the-system
-description: Before asserting how unfamiliar code behaves at runtime — legacy, inherited, or AI-generated — open and read the actual implementation. A name, type, signature, schema, or grep hit is a lead, not a fact; in this kind of codebase they routinely lie. Use any time you are about to make a load-bearing claim about behavior you did not just write.
+description: Read the actual implementation before you state, design against, or test how any code you did not just write behaves, especially legacy, inherited, or AI-generated code. A name, type, signature, schema, or grep hit is a lead, not a fact; in these codebases they routinely lie, so open the file and trace the real path before concluding. Fires whenever you are about to claim 'this function does X', 'this parameter means Y', or 'this path is dead or live', and whenever a user asks how existing code actually works or whether it does what its name says.
 source: "recovered from git: chdr db40616, bbca3f9; cave-public 61e8f29, e4d6c25"
 ---
 

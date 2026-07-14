@@ -1,6 +1,6 @@
 ---
 name: pr-sizing
-description: Decide whether to bundle multiple changes into one PR or ship them standalone. PR size targets the operator's attention (one milestone per PR), not the agent's construction unit (one logical change per PR). Use when composing PRs for structurally similar work — multiple units, multiple amendments, or many files with the same transformation.
+description: You have finished several similar changes and must decide whether to open one PR or several: work that produced multiple units, multiple small amendments to the same scope, or many files getting the same transformation. This sizes FINISHED changes into PRs by the reviewer's attention (one milestone the reviewer might stop at per PR), not how the work was scoped or built (decompose-by-attention) and not one file's internal cohesion (cohesion-review). Should these ship as one PR or split them? Bundle look-alike diffs; ship real milestones or plan-shape changes standalone.
 source: "recovered from git: chdr 8f0a17f, 2c418bd"
 ---
 
