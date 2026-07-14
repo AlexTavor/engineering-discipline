@@ -34,6 +34,8 @@ These skills are meant to be applied by reflex whenever you work on code, not on
 
 Hooks load at session start, so restart Claude Code after installing for them to take effect. To turn the per-edit reminders off, create a file named `.no-engineering-sop` in the project root, or delete `hooks/hooks.json`. The directive doubles as a paste-in block for a project `CLAUDE.md` if you prefer a static copy.
 
+Verify the hooks end-to-end with `bash scripts/verify-hooks.sh`, run from a logged-in terminal. It loads the plugin into a nested headless session, writes a test file, and confirms both hooks fire the way Claude Code runs them.
+
 ## What's inside — 23 skills
 
 ### Test adequacy — does the test actually catch a bug?
